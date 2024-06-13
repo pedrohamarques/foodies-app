@@ -10,3 +10,8 @@ export type MealsProps = {
   creator_email: string;
   instructions: string;
 };
+
+export type ShareMealProps = Omit<MealsProps, "slug" | "image" | "id"> & {
+  image: File;
+  id?: string;
+};
