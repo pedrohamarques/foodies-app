@@ -10,3 +10,11 @@ export async function getMeals() {
 
   return db.prepare<MealsProps[], MealsProps>("SELECT * FROM meals").all();
 }
+
+export function getMeal(slug: string) {
+  return db
+    .prepare<MealsProps["slug"], MealsProps>(
+      "SELECT * FROM meals WHERE slug = ?"
+    )
+    .get(slug);
+}
