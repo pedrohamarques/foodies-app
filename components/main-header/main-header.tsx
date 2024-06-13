@@ -14,7 +14,7 @@ export function MainHeader() {
       <header className={styles.header}>
         <Link href="/" className={styles.logo}>
           <Image src={logoImage} alt="A plate with food on it" priority />
-          Next Level Food
+          NextLevel Food
         </Link>
 
         <nav className={styles.nav}>
