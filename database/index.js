@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 
-const db = new Database("meals.db", { verbose: console.log });
+const db = new Database("meals.db");
 
 const dummyMeals = [
   {
