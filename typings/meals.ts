@@ -7,4 +7,6 @@ export type MealsProps = {
   summary: string;
   creator: string;
   id: string;
+  creator_email: string;
+  instructions: string;
 };
