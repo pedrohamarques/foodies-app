@@ -1,4 +1,5 @@
 import { MealsProps } from "@/typings/meals";
+
 import { MealItem } from "./components/meal-item";
 
 import styles from "./meals-grid.module.css";

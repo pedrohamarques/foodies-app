@@ -5,13 +5,7 @@ import { MealsProps } from "@/typings/meals";
 
 import styles from "./meal-item.module.css";
 
-export default function MealItem({
-  title,
-  slug,
-  image,
-  summary,
-  creator,
-}: MealsProps) {
+export function MealItem({ title, slug, image, summary, creator }: MealsProps) {
   return (
     <article className={styles.meal}>
       <header>
