@@ -10,6 +10,20 @@ type MealsDetailsParams = {
     mealSlug: string;
   };
 };
+
+export async function generateMetadata({ params }: MealsDetailsParams) {
+  const meal = getMeal(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  return {
+    title: meal?.title,
+    description: meal?.summary,
+  };
+}
+
 export default function MealDetails({ params }: MealsDetailsParams) {
   const meal = getMeal(params.mealSlug);
 
